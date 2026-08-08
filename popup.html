@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Terrafeed Companion</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <img src="icons/icon32.png" alt="" />
+      <div>
+        <strong>Terrafeed Companion</strong>
+        <span>reads the page, not the browser</span>
+      </div>
+    </header>
+
+    <button id="scan" type="button" class="primary">Scan this page</button>
+
+    <div id="result" class="result hidden">
+      <section>
+        <h2>Countries mentioned</h2>
+        <div id="countries" class="chips"></div>
+      </section>
+
+      <section>
+        <h2>Topics</h2>
+        <div id="topics" class="chips"></div>
+      </section>
+
+      <section>
+        <h2>Severity</h2>
+        <div class="meter"><span id="meterFill"></span></div>
+      </section>
+
+      <button id="copy" type="button" class="primary">Copy Terrafeed topic filter</button>
+      <p id="copyHint" class="hint"></p>
+    </div>
+
+    <div id="empty" class="empty">
+      Open a news article, then press Scan. Nothing leaves your browser — the
+      page text is matched against a bundled place and keyword list, right
+      here.
+    </div>
+
+    <footer>
+      Paste the copied line into Terrafeed's <em>Topics → Describe a topic</em>
+      box.
+    </footer>
+
+    <script src="places.js"></script>
+    <script src="detect.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
