@@ -1,0 +1,150 @@
+:root {
+  color-scheme: dark;
+  --bg: #070b12;
+  --panel: #0d141f;
+  --line: #1b2735;
+  --text: #dde6f0;
+  --dim: #8496ab;
+  --accent: #5ef2dc;
+  --warm: #f5a531;
+  --danger: #e5484d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 320px;
+  margin: 0;
+  padding: 12px;
+  background: var(--bg);
+  color: var(--text);
+  font: 13px/1.4 'Segoe UI', system-ui, sans-serif;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+header img {
+  width: 26px;
+  height: 26px;
+}
+
+header div {
+  display: flex;
+  flex-direction: column;
+}
+
+header span {
+  color: var(--dim);
+  font-size: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  font: inherit;
+  cursor: pointer;
+}
+
+button.primary {
+  background: var(--accent);
+  color: #04140f;
+  font-weight: 600;
+}
+
+button.primary:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.result {
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.result section {
+  margin-bottom: 10px;
+}
+
+.result h2 {
+  margin: 0 0 5px;
+  color: var(--dim);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.chip {
+  padding: 3px 8px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #101a26;
+  font-size: 11px;
+}
+
+.chip.country {
+  border-color: rgba(94, 242, 220, 0.35);
+  color: var(--accent);
+}
+
+.chip.topic {
+  border-color: rgba(245, 165, 49, 0.35);
+  color: var(--warm);
+}
+
+.meter {
+  height: 6px;
+  border-radius: 3px;
+  background: #16202e;
+  overflow: hidden;
+}
+
+.meter span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--warm));
+}
+
+.empty {
+  padding: 10px 2px;
+  color: var(--dim);
+  font-size: 11.5px;
+}
+
+.hint {
+  margin: 6px 0 0;
+  color: var(--accent);
+  font-size: 11px;
+  min-height: 14px;
+}
+
+footer {
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--line);
+  color: var(--dim);
+  font-size: 10.5px;
+}
+
+footer em {
+  color: var(--text);
+  font-style: normal;
+}
